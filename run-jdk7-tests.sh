@@ -18,9 +18,9 @@ mkdir -p "$BUILD_DIR"
   "$BASE_DIR/src/com/settle/pg/EncryptUtil.java" \
   "$BASE_DIR/src/com/settle/pg/HttpClientUtil.java" \
   "$BASE_DIR/src/com/settle/pg/StringUtil.java" \
-  "$BASE_DIR/src/com/settle/pg/Tls12SocketFactory.java" \
+  "$BASE_DIR/src/com/settle/pg/Tls12OrHigherSocketFactory.java" \
   "$BASE_DIR/test/com/settle/pg/EncryptUtilCompatibilityTest.java" \
-  "$BASE_DIR/test/com/settle/pg/Tls12SocketFactoryTest.java"
+  "$BASE_DIR/test/com/settle/pg/Tls12OrHigherSocketFactoryTest.java"
 
 "$JAVA_HOME/bin/java" \
   -cp "$BUILD_DIR:$LIB_DIR/*" \
@@ -28,4 +28,4 @@ mkdir -p "$BUILD_DIR"
 
 "$JAVA_HOME/bin/java" \
   -cp "$BUILD_DIR:$LIB_DIR/*" \
-  com.settle.pg.Tls12SocketFactoryTest
+  com.settle.pg.Tls12OrHigherSocketFactoryTest
