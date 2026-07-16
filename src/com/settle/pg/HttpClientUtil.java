@@ -35,7 +35,7 @@ public class HttpClientUtil {
 		String resData = "";
 
 		try {
-			SSLContext sc = SSLContext.getInstance("TLSv1.2");
+			SSLContext sc = SSLContext.getInstance("TLS");
 			// null TrustManager: JRE 기본 신뢰 저장소와 인증서 체인 검증을 사용합니다.
 			sc.init(null, null, null);
 			
@@ -46,7 +46,7 @@ public class HttpClientUtil {
 			
 			httpsURLConnection = (HttpsURLConnection)url.openConnection();
 			httpsURLConnection.setSSLSocketFactory(
-					new Tls12SocketFactory(sc.getSocketFactory()));
+					new Tls12OrHigherSocketFactory(sc.getSocketFactory()));
 			httpsURLConnection.setDoInput(true);
 			httpsURLConnection.setDoOutput(true);
 			httpsURLConnection.setRequestProperty("Content-Type", "application/json");
