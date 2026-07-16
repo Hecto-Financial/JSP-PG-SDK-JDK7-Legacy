@@ -1,6 +1,48 @@
-# JSP-PG-SDK
+# JSP-PG-SDK-JDK7-Legacy
 
-헥토파이낸셜 PG 연동을 위한 JSP 샘플 코드입니다.
+JDK 7 가맹점 환경을 위한 헥토파이낸셜 PG 연동 JSP 샘플 코드입니다.
+
+## 지원 환경
+
+- JDK 7 이상
+- Apache Tomcat 7
+- Servlet 3.0
+- AES-256-ECB / PKCS7Padding
+
+이 저장소 전체가 JDK 7 레거시 배포본입니다. Bouncy Castle lightweight API를 사용하므로
+JCE가 AES 키를 128비트로 제한하는 서버에서도 policy 파일 변경 없이 AES-256을 처리합니다.
+기존 `AES/ECB/PKCS5Padding` 결과와 호환되며 JSP 호출부는 변경하지 않았습니다.
+
+## JDK 7 검증 결과
+
+실제 JDK 7의 제한 정책 환경에서 전체 Java 소스 컴파일과 암호화 호환성 테스트를 수행했습니다.
+Tomcat 7.0.109의 Jasper 컴파일러로 전체 JSP 10개도 JDK 7 source/target 기준 사전 컴파일했습니다.
+
+```text
+java.version=1.7.0_352
+AES max allowed key length=128
+standard JCE AES-256 rejection confirmed: Illegal key size or default parameters
+legacy ciphertext=z1NXwx+Muz+LTucnSi2lxjwgD3psQwUZ5/dz4mxeDYVqU0cW9bMLaSw9QELwXIEQ
+ALL TESTS PASSED
+JSP compile errors=0
+```
+
+저장소에 포함된 클래스 파일도 JDK 7 클래스 버전인 `major 51`로 컴파일했습니다.
+
+## 테스트 실행
+
+실제 JDK 7 경로를 `JAVA_HOME`으로 지정한 후 실행합니다.
+
+```sh
+JAVA_HOME=/path/to/jdk7 ./run-jdk7-tests.sh
+```
+
+## 암호화 의존성
+
+- `bcprov-jdk15to18-1.84.jar`
+- 배포 위치: `WebContent/WEB-INF/lib`
+- SHA-256: `a30777eebbd44aa1713c14ee04547de1df63ef3e383e910ed210e1d0f2c2ef92`
+- Bouncy Castle 공식 지원 범위: JDK 1.5~1.8
 
 ## 파일 구조
 

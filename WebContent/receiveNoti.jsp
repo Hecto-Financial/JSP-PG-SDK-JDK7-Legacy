@@ -127,11 +127,11 @@ try{
 if (hashCipher.equals(pktHash)) {
     notiLogger.info("["+ mchtTrdNo + "][SHA256 Hash Check] hashCipher[" + hashCipher + "] pktHash[" + pktHash + "] equals?[TRUE]");
     if ("0021".equals(outStatCd)){
-        notiLogger.info("["+ mchtTrdNo + "][Success] params:" + String.join("|", noti));
+        notiLogger.info("["+ mchtTrdNo + "][Success] params:" + StringUtil.join("|", noti));
         resp = notiSuccess(noti); 
     }
     else if ("0051".equals(outStatCd)){
-        notiLogger.info("["+ mchtTrdNo + "][Wait For Deposit] params:" + String.join("|", noti));
+        notiLogger.info("["+ mchtTrdNo + "][Wait For Deposit] params:" + StringUtil.join("|", noti));
         resp = notiWaitingPay(noti);
     }
     else{
