@@ -109,8 +109,8 @@ var MID_BY_TYPE = {
     mobile : 'nxhp_pl_il',                  //휴대폰 일반 결제
     mobileRefund : 'nxhp_pl_il',            //휴대폰 결제 환불
     point : 'nxpt_kt_il',                   //KT클립포인트
-    corpPayco : 'nxca_payco',               //페이코 간편결제
-    corpKakao : 'nxca_kakao',               //카카오페이 간편결제
+    corpPayco : 'hecto_test',               //페이코 간편결제
+    corpKakao : 'hecto_test',               //카카오페이 간편결제
     corpNvpay : 'hecto_test',               //네이버페이 간편결제
     corpSubsKakao : '<%= SUBS_MID_KAKAO %>',//카카오페이 정기결제
     corpSubsNvpay : '<%= SUBS_MID_NAVER %>' //네이버페이 정기결제

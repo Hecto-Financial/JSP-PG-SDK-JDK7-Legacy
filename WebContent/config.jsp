@@ -7,9 +7,7 @@
         nxca_jt_il : 신용카드 인증 결제
         nxca_jt_bi : 신용카드 비인증 결제
         nxca_jt_gu : 신용카드 구인증 결제
-       	nxca_payco : 페이코 간편결제
-       	nxca_kakao : 카카오 간편결제
-       	hecto_test : 네이버페이 간편결제
+       	hecto_test : 페이코/카카오페이/네이버페이 간편결제
         nxhp_pl_il : 휴대폰 일반 결제
         nxhp_pl_hd : 휴대폰 인증/승인 분리형
         nxhp_pl_ma : 휴대폰 월 자동 결제

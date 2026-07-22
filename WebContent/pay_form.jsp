@@ -33,8 +33,8 @@ var MID_BY_TYPE = {
     mobile : 'nxhp_pl_il',                  //휴대폰 일반 결제
     mobileAuto : 'nxhp_pl_ma',              //휴대폰 월 자동 결제(1회차)
     point : 'nxpt_kt_il',                   //KT클립포인트
-    payco : 'nxca_payco',                   //페이코 간편결제
-    kakao : 'nxca_kakao',                   //카카오페이 간편결제
+    payco : 'hecto_test',                   //페이코 간편결제
+    kakao : 'hecto_test',                   //카카오페이 간편결제
     nvpay : 'hecto_test',                   //네이버페이 간편결제
     kakaoAuto : '<%= SUBS_MID_KAKAO %>',    //카카오페이 정기결제(빌키발급)
     nvpayAuto : '<%= SUBS_MID_NAVER %>'     //네이버페이 정기결제(빌키발급)
