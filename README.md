@@ -194,3 +194,8 @@ JAVA_HOME=/path/to/jdk7 ./run-jdk7-tests.sh
 - `nextUrl`에서는 고객에게 결제 성공 또는 실패 결과 화면을 반환합니다.
 - `notiUrl`에서는 해시 검증이 성공한 요청에 한해 가맹점 내부 데이터와 DB를 처리합니다.
 - 중복 노티에 대비한 멱등성 처리는 가맹점 시스템에서 구현해야 합니다.
+
+## 문의
+
+- 기술 문의: pgsupport@hecto.co.kr
+- 개발 가이드: [헥토파이낸셜 개발자 센터](https://developers.hectofinancial.co.kr)
